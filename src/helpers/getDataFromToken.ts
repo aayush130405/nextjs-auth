@@ -10,3 +10,6 @@ export const getDataFromToken = async (request: NextRequest) => {
         throw new Error(error.message)
     }
 }
+
+
+//THIS FUNCTION WILL RETURN THE USER ID
