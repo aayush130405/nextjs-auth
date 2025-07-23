@@ -82,7 +82,7 @@ export default function LoginPage () {
                     <button 
                         type="button"
                         onClick={forgotPassword}
-                        className="w-full py-3 rounded-lg border border-violet-500 text-violet-700 font-semibold text-lg shadow-md hover:bg-violet-50 transition-all focus:outline-none focus:ring-2 focus:ring-violet-400"
+                        className="cursor-pointer w-full py-3 rounded-lg border border-violet-500 text-violet-700 font-semibold text-lg shadow-md hover:bg-violet-50 transition-all focus:outline-none focus:ring-2 focus:ring-violet-400"
                     >
                         Forgot Password
                     </button>
