@@ -16,7 +16,7 @@ export default function ResetPasswordPage() {
     const [token, setToken] = useState("")
     const [success, setSuccess] = useState(false)
 
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (newPassword !== confirmPassword) {
             setError("Passwords do not match.");
