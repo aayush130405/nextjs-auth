@@ -14,6 +14,7 @@ export default function ResetPasswordPage() {
     const [confirmPassword, setConfirmPassword] = useState("")
     const [error, setError] = useState("")
     const [token, setToken] = useState("")
+    const [success, setSuccess] = useState(false)
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
@@ -25,6 +26,7 @@ export default function ResetPasswordPage() {
             console.log("Passwords match. Proceeding...");
             const res = await axios.post('/api/users/resetpassword', {newPassword, token})
             console.log(res);
+            setSuccess(true)
         }
         
     }
@@ -66,6 +68,11 @@ export default function ResetPasswordPage() {
                 {error && (
                     <div className="mt-4 text-center text-red-600 font-semibold bg-red-100 rounded-lg py-2">
                         {error}
+                    </div>
+                )}
+                {success && (
+                    <div className="mt-4 text-center text-green-600 font-semibold bg-green-100 rounded-lg py-2">
+                        Password changed successfully! You can now <a href="/login" className="underline">log in</a>.
                     </div>
                 )}
             </div>
